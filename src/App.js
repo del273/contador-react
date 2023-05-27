@@ -1,25 +1,53 @@
-import logo from './logo.svg';
+import freecodecamplogo from './imagenes/freecodecamp-logo.png'
 import './App.css';
+import Boton from './componentes/boton';
+import Contador from './componentes/Contador';
+import  {useState} from 'react';
+import tarjeta from './imagenes/tarjeta.jpg'
 
 function App() {
+
+  const [numClics, setNumClics] = useState(0)
+
+  const manejarclic= () => {
+    setNumClics(numClics+1);
+  }
+
+    const reiniciarcontador = () => {
+      setNumClics(0);
+   
+
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+   <div className='App'>
+  <div className= 'freecodecamp-logo-contenedor'>
+     <img
+     className='freecodecamp-logo'
+     src={freecodecamplogo}
+     alt='logo de freecodecamp'/>
+      </div>
+      <div className='contenedor-principal'>
+
+      <Contador numClics={numClics} />
+      <Boton 
+      texto='Clic'
+      esbotondeclic={false}
+      manejarclic={manejarclic}/>
+
+      <Boton
+      texto='Reiniciar'
+      esbotondeclic={false}
+      manejarclic={reiniciarcontador} />
+
+      <img
+     className='tarjeta'
+     src={tarjeta}
+     alt='logo de tarjeta'/>
+      
+      </div>
+      </div>
+    );
+  }
 
 export default App;
