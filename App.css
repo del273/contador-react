@@ -1,0 +1,48 @@
+* {padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+
+
+}
+html,
+body {
+
+  background-image: url('https://img.freepik.com/vector-gratis/fondo-lineas-metal-fibra-carbono-negro-oscuro_1017-37138.jpg?size=626&ext=jpg');
+  background-repeat: repeat;
+  border: 2px solid black;
+  height: 500px
+}
+
+.App {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding-top: 15px;
+  font-family: Lato,sans-serif;
+
+}
+
+.frecodecamp-logo-contenedor {
+
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px;
+
+}
+
+.freecodecamp-logo {
+
+  height: 80px;
+}
+
+.tarjeta {
+
+  height: 90px;
+  opacity: 0.7 ;
+  flex-wrap: wrap;
+  animation-delay: 5s,3ms
+}
+.tarjeta:hover {filter: blur(5px);}
